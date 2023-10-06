@@ -19,7 +19,7 @@ namespace eTicketsEase.Controllers
         public async Task<IActionResult> Index()
         {
             var data = await _db.Actors.ToListAsync();
-            return View();
+            return View(data);
         }
     }
 }
