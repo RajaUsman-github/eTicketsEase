@@ -18,8 +18,8 @@ namespace eTicketsEase.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            var data = await _db.Movies.ToListAsync();
-            return View();
+            var data = await _db.Movies.Include(c=>c.Cinema).OrderBy(m=>m.Name).ToListAsync();
+            return View(data);
         }
     }
 }

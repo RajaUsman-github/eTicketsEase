@@ -10,8 +10,11 @@ namespace eTicketsEase.Models
     {
         [Key]
         public int Id { get; set; }
+        [Display(Name = "Profile Picture")]
         public string ProfilePicturUrl { get; set; }
+        [Display(Name = "Full Name")]
         public string FullName { get; set; }
+        [Display(Name = "Actor Bio")]
         public string Bio { get; set; }
 
         //Relatioship
