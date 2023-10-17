@@ -11,10 +11,15 @@ namespace eTicketsEase.Models
         [Key]
         public int Id { get; set; }
         [Display(Name = "Profile Picture")]
+        [Required(ErrorMessage = "Profile Picture is required")]
         public string ProfilePicturUrl { get; set; }
+
         [Display(Name = "Full Name")]
+        [Required(ErrorMessage = "Full Name is required")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "Full Name must be between 3 and 50 chars")]
         public string FullName { get; set; }
         [Display(Name = "Actor Bio")]
+        [Required(ErrorMessage = "Bio is required")]
         public string Bio { get; set; }
 
         //Relatioship
