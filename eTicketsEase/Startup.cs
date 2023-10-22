@@ -28,6 +28,7 @@ namespace eTicketsEase
         {
             services.AddDbContext<AppDbContext>(options =>options.UseSqlServer(Configuration.GetConnectionString("TicketConnection")));
             services.AddScoped<IActorsService, ActorsService>();
+            services.AddScoped<IProducerService, ProducerService>();
             services.AddControllersWithViews();
         }
 
